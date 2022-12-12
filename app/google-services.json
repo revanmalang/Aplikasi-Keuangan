@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288376049662",
+    "project_id": "moneytoring-e7505",
+    "storage_bucket": "moneytoring-e7505.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288376049662:android:a7ee2b7d7043856d817aaf",
+        "android_client_info": {
+          "package_name": "com.besthora.moneytoringapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288376049662-e8d0oum02mqoinv5g95l3etsk3kbaf0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwcMmL0zuPRjSSxxPDe_UiJd7kzMMxqZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288376049662-e8d0oum02mqoinv5g95l3etsk3kbaf0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

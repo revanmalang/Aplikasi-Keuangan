@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/bgheader"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/name_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="@string/moneytoring" />
+
+        <TextView
+            android:textAlignment="textEnd"
+            android:layout_marginTop="30dp"
+            android:id="@+id/status_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="@string/moneytoring" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bginfopengeluaranpemasukan"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/info_profile_img"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/pp"
+                android:contentDescription="@string/profile" />
+
+            <TextView
+                android:id="@+id/info_time_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/hello">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/info_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/rich_man">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/layout_pemasukan"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/icon_pemasukan"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_masuk" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="13dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:id="@+id/title_total_pemasukan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pemasukan"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/show_total_pemasukan"
+                            app:layout_constraintStart_toStartOf="@+id/title_total_pemasukan"
+                            app:layout_constraintTop_toBottomOf="@+id/title_total_pemasukan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:layout_marginTop="2dp"
+                            app:layout_constraintStart_toStartOf="@+id/title_total_pemasukan"
+                            app:layout_constraintTop_toBottomOf="@+id/title_total_pemasukan"
+                            android:id="@+id/shimmer_home_nominal_in"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            >
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <include layout="@layout/shimmer_nominal"/>
+                                </LinearLayout>
+                            </ScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_pengeluaran"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/icon_pengeluaran"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_keluar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="13dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/title_total_pengeluaran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/total_pengeluaran"
+                                android:textColor="@color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/show_total_pengeluarans"
+                                app:layout_constraintStart_toStartOf="@+id/title_total_pengeluaran"
+                                app:layout_constraintTop_toBottomOf="@+id/title_total_pengeluaran"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                />
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:layout_marginTop="2dp"
+                                app:layout_constraintStart_toStartOf="@+id/title_total_pengeluaran"
+                                app:layout_constraintTop_toBottomOf="@+id/title_total_pengeluaran"
+                                android:id="@+id/shimmer_home_nominal_out"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                >
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <include layout="@layout/shimmer_nominal"/>
+                                    </LinearLayout>
+                                </ScrollView>
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:id="@+id/title_latest_trx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/transaksi_terbaru"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:textColor="@color/bg_pemasukan"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/to_all_transaksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/lihat_semua"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyler_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_latest_trx"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_latest_trx"
+        android:id="@+id/shimmer_home_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/itemdatatrx_home_shimer"/>
+                <include layout="@layout/itemdatatrx_home_shimer"/>
+                <include layout="@layout/itemdatatrx_home_shimer"/>
+                <include layout="@layout/itemdatatrx_home_shimer"/>
+                <include layout="@layout/itemdatatrx_home_shimer"/>
+            </LinearLayout>
+        </ScrollView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        app:mbn_shadowColor="#1f212121"
+        android:id="@+id/meowbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:mbn_circleColor="@color/bgheader"
+        app:mbn_backgroundBottomColor="@color/bgheader"
+        app:mbn_countBackgroundColor="@color/bgheader"
+        app:mbn_defaultIconColor="#E4DFDF"
+        app:mbn_selectedIconColor="@color/white"
+        android:background="@drawable/bgtransparant_meow"
+        tools:ignore="MissingConstraints" >
+    </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

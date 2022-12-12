@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgconfirmpermission">
+
+    <TextView
+        android:id="@+id/title_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Session Saved"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/line"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/title_mode"
+        app:layout_constraintStart_toStartOf="@+id/title_mode"
+        app:layout_constraintTop_toBottomOf="@+id/title_mode"
+        app:layout_constraintVertical_bias="0.092"></LinearLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/title_mode"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/title_mode"
+        app:layout_constraintTop_toBottomOf="@+id/title_mode"
+        app:layout_constraintVertical_bias="0.041"
+        app:singleSelection="true">
+
+        <TextView
+            android:paddingBottom="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/pernah_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </TextView>
+
+        <com.google.android.material.chip.Chip
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            app:chipIcon="@drawable/ic_logout"
+            app:chipIconSize="40dp"
+            android:id="@+id/chip_loginagain"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white"
+            android:text="Login again" />
+
+        <com.google.android.material.chip.Chip
+            android:textStyle="bold"
+            app:chipIcon="@drawable/ic_logout"
+            app:chipIconSize="40dp"
+            android:id="@+id/chip_newsession"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/white"
+            android:text="New session" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

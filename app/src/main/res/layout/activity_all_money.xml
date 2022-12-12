@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_catatan"
+        app:titleCentered="true"
+        app:title="Catatan Keuangan"
+        app:subtitleCentered="true"
+        app:subtitleTextColor="@color/white"
+        app:titleTextColor="@color/white"
+        android:background="@color/bgheader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/title_latest_trx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_transaksi"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_catatan"
+        tools:ignore="MissingConstraints" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/title_latest_trx"
+        tools:layout_editor_absoluteX="20dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsfilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="8dp"
+            app:chipSpacing="8dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pengeluaran" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pemasukan" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transaksi_online" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transaksi_offline" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listdataalltrx"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        tools:listitem="@layout/itemdatatrx">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        app:mbn_shadowColor="#1f212121"
+        android:id="@+id/meowbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:mbn_circleColor="@color/bgheader"
+        app:mbn_backgroundBottomColor="@color/bgheader"
+        app:mbn_countBackgroundColor="@color/bgheader"
+        app:mbn_defaultIconColor="#E4DFDF"
+        app:mbn_selectedIconColor="@color/white"
+        android:background="@drawable/bgtransparant_meow"
+        tools:ignore="MissingConstraints" >
+    </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

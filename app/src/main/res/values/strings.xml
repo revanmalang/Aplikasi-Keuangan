@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Moneytoring</string>
+    <string name="moneytoring">Moneytoring</string>
+    <string name="sore">Selamat sore!</string>
+    <string name="capstone">Capstonessss</string>
+    <string name="total_pemasukan">Total Pemasukan</string>
+    <string name="nominal">Rp100.000.000.00</string>
+    <string name="total_pengeluaran">Total Pengeluaran</string>
+    <string name="transaksi_terbaru">Transaksi Terbaru</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="welcome">Welcome Back,</string>
+    <string name="login">LOGIN</string>
+    <string name="moneytoring_dolar">M$NEYTORING</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="or_sign_up_with">- Or sign up with -</string>
+    <string name="button_sign_google">button sign google disini</string>
+    <string name="hello">Hello,</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign">SIGN</string>
+    <string name="icon_app">Icon App</string>
+    <string name="Bank">BRImo</string>
+    <string name="date">12/12/2027</string>
+    <string name="online">Online</string>
+    <string name="income_or_extend">+</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</string>
+    <string name="filter_transaksi">Filter transaksi</string>
+    <string name="pengeluaran">Pengeluaran</string>
+    <string name="pemasukan">Pemasukan</string>
+    <string name="transaksi_online">Transaksi Online</string>
+    <string name="transaksi_offline">Transaksi Offline</string>
+    <string name="custom">Custom</string>
+    <string name="profile">Profile</string>
+    <string name="ini_splash_screen">INI SPLASH SCREEN</string>
+    <string name="service_name">MoneytoringService</string>
+    <string name="savetrx">SAVE</string>
+
+
+    <string-array name="trxmode">
+        <item>Online</item>
+        <item>Offline</item>
+    </string-array>
+
+    <string name="izin">Izinkan Notifikasi</string>
+    <string name="ga_izin">Menolak Izinkan Notifikasi</string>
+    <string name="diizinkan" translatable="false">Jika kamu mengizinkan notifikasi pada aplikasi ini, maka untuk input pemasukan &amp; pengeluaran dapat secara otomatis, bahkan dengan aplikasi ditutup sekalipun.</string>
+    <string name="tidak_diizinkan">Jika kamu tidak mengizinkan aplikasi untuk membaca notifikasi, kamu bisa input data secara manual</string>
+    <string name="selengkapnya">Baca Selengkapnya</string>
+    <string name="username">Kim Jong Un</string>
+    <string name="info">Info</string>
+    <string name="decline">Menolak izin</string>
+    <string name="sign_guest">Sign as guest</string>
+    <string name="pernah_login">Anda pernah login di aplikasi kami, dan anda bisa masuk lagi tanpa menghilangkan data yang lama.</string>
+    <string name="rich_man">Rich man</string>
+
+
+</resources>
